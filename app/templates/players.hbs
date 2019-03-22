@@ -1,7 +1,23 @@
 <h2>List of Players</h2>
-
+{{!-- you probably just need a table here but check to see the easiest way with sorting by attributes --}}
 <ul>
   {{#each this.model as |player|}}
-    <li>{{player}}</li>
+    <div class="player">
+      <div class="name">
+        {{player.name}}
+      </div>
+      <div class="team">
+        {{player.team}}
+      </div>
+      <div class="birthdate">
+        {{player.birthdate}}
+      </div>
+      <div class="star_sign">
+        {{player.star_sign}} {{!-- check for helper for formatting?  --}}
+      </div>
+      <div class="birth_location">
+        {{player.birth_location}}
+      </div>
+    </div>
   {{/each}}
 </ul>

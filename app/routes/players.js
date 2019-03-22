@@ -24,8 +24,8 @@ export default Route.extend({
       name: 'Elias Pettersson',
       age: '20',
       birthday: '11/12/1998',
-      star_sign: 'Sundsvall, Sweden', //make sure this field can handle i18n characters - anglicized version of cyrillic? 
-      birth_location: '',
+      star_sign: 'scorpio',
+      birth_location:'Sundsvall, Sweden', //make sure this field can handle i18n characters - anglicized version of cyrillic?
       team: 'Vancouver Canucks'
   }];
   }
