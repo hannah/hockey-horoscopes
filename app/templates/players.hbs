@@ -2,17 +2,17 @@
 {{!-- you probably just need a table here but check to see the easiest way with sorting by attributes --}}
 <ul>
   {{#each this.model as |player|}}
-    <div class="player">
-      <div class="name">
+    <div class="row player">
+      <div class="col-md-2 name">
         {{player.name}}
       </div>
-      <div class="team">
+      <div class="col-md-2 team">
         {{player.team}}
       </div>
-      <div class="birthdate">
-        {{player.birthdate}}
+      <div class="col-md-2 birthdate">
+        {{player.birthday}}
       </div>
-      <div class="star_sign">
+      <div class="col-md-2 star_sign">
         {{player.star_sign}} {{!-- check for helper for formatting?  --}}
       </div>
       <div class="birth_location">
