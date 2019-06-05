@@ -1,5 +1,22 @@
-{{!-- The following component displays Ember's default welcome message. --}}
-{{welcome-page}}
-{{!-- Feel free to remove this! --}}
+<div class="container">
+  <div class="menu">
+    {{#link-to "index" class="menu home"}}
+      <h1>
+        <em>Hockey Horoscopes</em>
+      </h1>
+    {{/link-to}}
+    <div class="links">
+      {{#link-to "about" class="menu about"}}
+        About
+      {{/link-to}}
+      {{!-- {{#link-to "signs" class="menu signs"}}Signs{{/link-to}}
+      {{#link-to "teams" class="menu teams"}}Teams{{/link-to}}
+      {{#link-to "players" class="menu players"}}Players{{/link-to}} --}}
+    </div>
+  </div>
 
-{{outlet}}
+  <div class="body">
+    {{outlet}}
+  </div>
+
+</div>
