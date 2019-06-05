@@ -1,10 +1,29 @@
 <h2>List of Players</h2>
 {{!-- you probably just need a table here but check to see the easiest way with sorting by attributes --}}
 <ul>
+  <div class="row header players">
+    <div class="col-md-2 title name">
+      Name
+    </div>
+    <div class="col-md-2 title team">
+      Current Team
+    </div>
+    <div class="col-md-2 title birthdate">
+      Birthday
+    </div>
+    <div class="col-md-2 title star_sign">
+      Star Sign
+    </div>
+    <div class="col-md-2 birth_location">
+      Birth Location
+    </div>
+  </div>
   {{#each this.model as |player|}}
     <div class="row player">
       <div class="col-md-2 name">
+        {{#link-to 'player' player.id}}
         {{player.name}}
+        {{/link-to}}
       </div>
       <div class="col-md-2 team">
         {{player.team}}
@@ -13,10 +32,10 @@
         {{player.birthday}}
       </div>
       <div class="col-md-2 star_sign">
-        {{player.star_sign}} {{!-- check for helper for formatting?  --}}
+        {{player.starsign}} {{!-- check for helper for formatting?  --}}
       </div>
       <div class="birth_location">
-        {{player.birth_location}}
+        {{player.birthlocation}}
       </div>
     </div>
   {{/each}}

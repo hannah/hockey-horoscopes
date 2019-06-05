@@ -1,13 +1,16 @@
 import { module, test } from 'qunit';
 import { setupApplicationTest } from 'ember-qunit';
+import setupMirage from 'ember-cli-mirage/test-support/setup-mirage';
 import {
   click,
   currentURL,
-  visit
+  visit,
+  findAll
 } from '@ember/test-helpers';
 
 module('Acceptance | list players', function(hooks) {
   setupApplicationTest(hooks);
+  setupMirage(hooks);
 
   test('should link to information about the website', async function(assert){
     await visit('/');
@@ -15,10 +18,10 @@ module('Acceptance | list players', function(hooks) {
     assert.equal(currentURL(), '/about', "should navigate to about");
   });
 
-  
+
   test('all players should be listed', async function(assert) {
-    //await visit('/players');
-    // players.name.total should equal total
+    await visit('/players');
+    assert.equal(findAll(".player.name"), 3);
   });
   // test('each player should have an associated sign')
   // test('each player should have an associated team')

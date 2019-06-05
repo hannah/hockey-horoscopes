@@ -1,1 +1,21 @@
-{{outlet}}
+
+<div class="menu back">
+  {{#link-to 'players'}}Back{{/link-to}}
+</div>
+<h1>Name: {{this.model.name}} </h1>
+
+<div class="profile img">
+  <img src='/player.png' alt="player's photograph" class="profile-photo">
+</div>
+
+<div class="team">
+  Team:{{this.model.team}}
+</div>
+
+<div class="birthdate">
+  Birthday: {{this.model.birthday}}
+</div>
+
+<div class="star-sign">
+  Star Sign: {{this.model.starsign}}
+</div>
