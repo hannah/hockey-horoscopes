@@ -5,7 +5,11 @@
 <h1>Name: {{this.model.name}} </h1>
 
 <div class="profile img">
-  <img src='/player.png' alt="player's photograph" class="profile-photo">
+  {{#if this.model.avatar}}
+    <img src={{this.model.avatar}} alt="player's photograph" class="profile-photo">
+  {{else}}
+    <img src="/blank_profile.png" alt="player's photograph" class="profile-photo">
+  {{/if}}
 </div>
 
 <div class="team">

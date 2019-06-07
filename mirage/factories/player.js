@@ -7,7 +7,7 @@ export default Factory.extend({
   },
 
   team: "Quebec Nordiques",
-  
+
   birthday() {
     return faker.date.past();
   },
@@ -18,6 +18,7 @@ export default Factory.extend({
 
   starsign: "gemini",
   birthlocation: "New York, NY, USA",
+  avatar: '/player.png'
 
 
 });
