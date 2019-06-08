@@ -7,5 +7,5 @@ export default DS.Model.extend({
   birthday: DS.attr('date'),
   starsign: DS.attr(), //computed property based on birth date (this is only sun sign, additional computed property will be needed for rising and moon signs - use github snippet for initial calculations)
   birthlocation: DS.attr('string'),
-  avatar: DS.attr(),  
+  avatar: DS.attr(),
 });

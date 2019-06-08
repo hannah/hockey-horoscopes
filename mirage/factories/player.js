@@ -12,10 +12,6 @@ export default Factory.extend({
     return faker.date.past();
   },
 
-  avatar() {
-    return faker.internet.avatar();
-  },
-
   starsign: "gemini",
   birthlocation: "New York, NY, USA",
   avatar: '/player.png'

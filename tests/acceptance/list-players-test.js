@@ -18,10 +18,20 @@ module('Acceptance | list players', function(hooks) {
     assert.equal(currentURL(), '/about', "should navigate to about");
   });
 
+  test('root should redirect to players list', async function(assert) {
+    await visit('/');
+    assert.equal(currentURL(), '/players')
+  })
 
   test('all players should be listed', async function(assert) {
     await visit('/players');
-    assert.equal(findAll(".player.name"), 3);
+    assert.equal(findAll(".player.name"), 10);
+  });
+
+  test('clicking on a player name should link to player profile', async function(assert) {
+    await visit('/players');
+    await click('name');
+    assert.equal(currentURL(), '/1')
   });
   // test('each player should have an associated sign')
   // test('each player should have an associated team')

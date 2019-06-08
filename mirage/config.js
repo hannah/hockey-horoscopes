@@ -24,7 +24,7 @@ export default function() {
   */
   this.namespace = '/api';
 
-  this.get('/players', (schema, request) => {
+  this.get('/players', (schema) => {
     return schema.players.all();
   });
 
